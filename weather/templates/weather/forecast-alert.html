@@ -5,13 +5,236 @@
 <head>
 	<title>Forecast - Alert!</title>
 	
-	<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
-
+  <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
 <body>
-	<!-- your single-location forecast with alert interface here -->
-</body>
+        <!-- Main navigation -->
+   <!-- Navigation bar and search box credit to Xiaoying Riely
+             PrettyDocs – Free Bootstrap 4 Documentation Theme for Developers and Startups
+             https://themes.3rdwavemedia.com/bootstrap-templates/startup/prettydocs-free-bootstrap-theme-for-developers-and-startups/>
+        <header>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+            <div class="container">
+              <a class="navbar-brand mb-0 h1" href="#">
+                <strong>STORM CHASE</strong>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a href="http://project1-startercode-mengyuanq-mengyuanq404017.codeanyapp.com:8000/weather/"
+                       class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                   <a href="/weather/forecast/" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Forecast</a>
+                  </li>
+                  <li class="nav-item">
+                  <a href="/weather/forecast/alert/" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Forecast with alert</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a href="/weather/comparison/alert/" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Comparison with alert</a>
+                  </li>
+                </ul>
+               
+              </div>
+            </div>
+          </nav>
+          <!-- Full Page Intro -->
+          <div class="view" style="background-image: url('https://petapixel.com/assets/uploads/2017/01/pulsetornadofeat.jpg');
+                                   background-repeat: no-repeat; 
+                                   background-size: cover; 
+                                   background-position: center center;">
+            <!-- Mask & flexbox options-->
+            <div class="mask rgba-gradient align-items-center">
+              <!-- Content -->
+              <div class="container">
+                <!--Grid row-->
+                <div class="row">
+                  <!--Grid column-->
+                  <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+               
+                     <h1 class="h1-responsive font-weight-bold mt-sm-5"> RALEIGH, NC </h1>
+                    <h3> Sunday, June 30<h3>
+                      <h2> 32 F STORM ANDREA<i class="fas fa-poo-storm"></i></h2>
+                     <form class="form-inline">
+                  <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                  </div>
+                </form>
+                    <hr class="hr-light">
+                
+                
+                  </div>
+                  <!--Grid column-->
+                      
+                  <!--Grid column-->
+                  <div class="col-md-6 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
+                   <div class="row">
+                   <div class="col-md-12 bs-linebreak"> </div>
+                   </div>
+                  </div>
+                  <!--Grid column-->
+                </div>
+                <div class="row">
+    <div class="col-sm">
+      <img src="https://www.washingtonpost.com/resizer/DhNu8CbiKeTnFbALumwrNEZi6s0=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/6X56F6JTZVDANN3PETYPSKFRJ4.jpg"
+           class="img-fluid" alt="Responsive image">
+    </div>
+    <div class="col-sm">
+       <h3><button class="btn-danger btn-lg"><i class="fas fa-exclamation-circle"></i> ALERT: Post-Tropical Cyclone Andrea Advisory Number   5
+</button></h3>
+      <h5><i class="fas fa-wind"></i> peak 40 mph (1-min) </h5>
+      <h5> <i class="fab fa-confluence"></i> season on-going</h5>
+      <h5><i class="fas fa-tint"></i> 1006 mbar (hPa) </h5>
+       <h5><i class="fas fa-medal"></i> breaking the previous record of four years set in 1951–1954 </h5>
+      </li>
+    
+ 
+    </div>
+    <div class="col-sm">
+      
+    </div>
+  </div>
+                <!--Grid row-->
+     <div class="row">
+        <h4> ACTIVITIES </h4>
+                  </div>
+     <div class="row">
+    <div class="col-sm">
+      <h6><button class="btn-success btn-lg"><i class="fas fa-camera"></i> </button>
+      <i class="fas fa-check"></i>   photo/ video taking</h6>
+    </div>
+    <div class="col-sm">
+      <h6><button class="btn-warning btn-lg"><i class="fas fa-hiking"></i> </button>
+      <i class="fas fa-times-circle"></i>   hiking</h6>
+    </div>
+    <div class="col-sm">
+     <h6><button class="btn-warning btn-lg"><i class="fas fa-car-crash"></i> </button>
+      <i class="fas fa-times-circle"></i>   driving through</h6>
+    </div>
+  </div>
+              </div>
+              <!-- Content -->
+              <div class="col-md-12 text-center">
+                <div class="col-lg-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+              
+                <p>The wind begun to rock the grass
+With threatening tunes and low, - 
+He flung a menace at the earth,
+A menace at the sky.
+<div class="col-md-12 bs-linebreak"> </div>
+The leaves unhooked themselves from trees
+And started all abroad;
+ <div class="col-md-12 bs-linebreak"> </div>
+The dust did scoop itself like hands
+And throw away the road.
+<div class="col-md-12 bs-linebreak"> </div>
+The wagons quickened on the streets,
+The thunder hurried slow;
+<div class="col-md-12 bs-linebreak"> </div>
+The lightning showed a yellow beak,
+And then a livid claw.
+<div class="col-md-12 bs-linebreak"> </div>
+The birds put up the bars to nests,
+The cattle fled to barns;
+<div class="col-md-12 bs-linebreak"> </div>
+There came one drop of giant rain,
+And then, as if the hands
+<div class="col-md-12 bs-linebreak"> </div>
+That held the dams had parted hold,
+The waters wrecked the sky,
+<div class="col-md-12 bs-linebreak"> </div>
+But overlooked my father's house,
+Just quartering a tree.
+<div class="col-md-12 bs-linebreak"> </div>
+The Thunderstorm » Emily Dickinson </p>
+              <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+              </div>
+              <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+              <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+                <div class="col-md-12 bs-linebreak"> </div>
+            </div>
+            <!-- Mask & flexbox options-->
+          </div>
+          <!-- Full Page Intro -->
+        </header>
+        <!-- Main navigation -->
+        <!--Main Layout-->
+        <main>
+          <div class="container">
+            <!--Grid row-->
+            <div class="row py-5">
+              <!--Grid column-->
+             
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </div>
+        </main>
+        <!--Main Layout-->
+
+    </body>
+
 </html>
 
 
